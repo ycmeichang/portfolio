@@ -50,19 +50,6 @@ svg {
 	align-self: center;
 }
 
-header a {
-	font-size: 1.5em;
-}
-
-footer {
-	margin-top: 2em;
-}
-
-footer a {
-	margin-right: 1.5em;
-	font-size: 1em;
-}
-
 .projects div {
 	margin-bottom: 2em;
 }
@@ -115,10 +102,6 @@ button {
 	font-size: 1em;
 }
 
-.main-container {
-	margin-bottom: 4em;
-}
-
 .col {
 	width: 50;
 }
@@ -139,14 +122,7 @@ button {
 	margin-left: 1em;
 }
 
-.col {
-	padding: 2em;
-}
-
 @media screen and (max-width: 768px) {
-	.col {
-		padding: 1.25em;
-	}
 	.main-container {
 		flex-direction: column;
 		margin-bottom: 1em;
@@ -157,8 +133,7 @@ button {
 	.mobile-hide {
 		display: none;
 	}
-	h1,
-	header a {
+	h1 {
 		font-size: 1.25em;
 	}
 
@@ -180,13 +155,6 @@ button {
 	}
 	.margin-bottom {
 		margin-bottom: 1em;
-	}
-	footer {
-		margin-top: 1em;
-	}
-
-	footer a {
-		font-size: 1em;
 	}
 	.project-title {
 		margin-bottom: -2em;
