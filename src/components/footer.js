@@ -9,51 +9,40 @@ const Container = styled.footer`
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 1em;
-	a {
-		margin-right: 1.5em;
-		font-size: 1em;
-	}
-	@media screen and (max-width: 768px) {
-		margin-top: 1em;
-
-		a {
-			font-size: 1em;
-		}
-	}
 `
-
 const Column = styled.div`
 	flex: 1;
 	padding: 2em;
+	:last-child {
+		text-align: right;
+	}
+	a:nth-child(n + 2) {
+		margin-left: 1.5em;
+		vertical-align: middle;
+	}
 	@media screen and (max-width: 768px) {
 		padding: 1.25em;
+		a:nth-child(n + 2) {
+			display: none;
+		}
 	}
 `
 
 export default () => (
 	<Container>
 		<Column>
-			<a href='mailto:meieh@pm.me'>
-				<span>meieh@pm.me</span>
+			<a href='mailto:meieh@pm.me'>meieh@pm.me</a>
+			<a href='https://linkedin.com/in/yuchench' target='_blank'>
+				<Icon icon={linkedinIcon} />
 			</a>
-
-			<a className='mobile-hide' href='https://linkedin.com/in/yuchench' target='_blank'>
-				<span className='vertical-align'>
-					<Icon icon={linkedinIcon} />
-				</span>
+			<a href='https://twitter.com/meiehc' target='_blank'>
+				<Icon icon={twitterIcon} />
 			</a>
-			<a className='mobile-hide' href='https://twitter.com/meiehc' target='_blank'>
-				<span className='vertical-align'>
-					<Icon icon={twitterIcon} />
-				</span>
-			</a>
-			<a className='mobile-hide' href='https://github.com/meieh' target='_blank'>
-				<span className='vertical-align'>
-					<Icon icon={githubIcon} />
-				</span>
+			<a href='https://github.com/meieh' target='_blank'>
+				<Icon icon={githubIcon} />
 			</a>
 		</Column>
-		<Column style={{ textAlign: 'right' }}>
+		<Column>
 			<span>&copy; {new Date().getFullYear()} Mei</span>
 		</Column>
 	</Container>
