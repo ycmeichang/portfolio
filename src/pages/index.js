@@ -9,6 +9,8 @@ import twitterIcon from '@iconify/icons-feather/twitter'
 import linkedinIcon from '@iconify/icons-feather/linkedin'
 import arrowUpRight from '@iconify/icons-feather/arrow-up-right'
 import Layout from '../components/layout'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 const Portfolio = styled.div`
 	max-width: 1000px;
@@ -48,24 +50,7 @@ class Index extends React.Component {
 			<div className={this.state.mode}>
 				<Layout />
 				<Portfolio>
-					<header>
-						<Container>
-							<Column className='col'>
-								<a href='/'>
-									Mei <span>👩‍💻</span>
-								</a>
-							</Column>
-							<Column className='col' style={{ textAlign: 'right' }}>
-								<a href='mailto:meieh@pm.me'>
-									<Icon icon={mailIcon} />
-								</a>
-								<a onClick={this.handleClick} className='margin-left'>
-									{this.state.mode === 'light' && <Icon icon={moonIcon} />}
-									{this.state.mode === 'dark' && <Icon icon={sunIcon} />}
-								</a>
-							</Column>
-						</Container>
-					</header>
+					<Header mode={this.state.mode} handleClick={this.handleClick} />
 					<main>
 						<Container className='main-container'>
 							<Column className='col'>
@@ -174,34 +159,7 @@ class Index extends React.Component {
 							</Column>
 						</Container>
 					</main>
-					<footer>
-						<Container>
-							<Column className='col'>
-								<a href='mailto:meieh@pm.me'>
-									<span>meieh@pm.me</span>
-								</a>
-
-								<a className='mobile-hide' href='https://linkedin.com/in/yuchench' target='_blank'>
-									<span className='vertical-align'>
-										<Icon icon={linkedinIcon} />
-									</span>
-								</a>
-								<a className='mobile-hide' href='https://twitter.com/meiehc' target='_blank'>
-									<span className='vertical-align'>
-										<Icon icon={twitterIcon} />
-									</span>
-								</a>
-								<a className='mobile-hide' href='https://github.com/meieh' target='_blank'>
-									<span className='vertical-align'>
-										<Icon icon={githubIcon} />
-									</span>
-								</a>
-							</Column>
-							<Column className='col' style={{ textAlign: 'right' }}>
-								<span>&copy; {new Date().getFullYear()} Mei</span>
-							</Column>
-						</Container>
-					</footer>
+					<Footer />
 				</Portfolio>
 			</div>
 		)

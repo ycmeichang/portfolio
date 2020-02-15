@@ -10,36 +10,33 @@ const Container = styled.div`
 	flex-wrap: wrap;
 `
 
-const Column = styled.div`
-	flex: 1;
-	padding: 2em;
-`
+const Column = styled.div`flex: 1;`
 
 export default () => (
 	<footer>
 		<Container>
-			<Column>
+			<Column className='col'>
 				<a href='mailto:meieh@pm.me'>
 					<span>meieh@pm.me</span>
 				</a>
 
-				<a href='https://linkedin.com/in/yuchench' target='_blank'>
-					<span style={{ verticalAlign: 'middle' }}>
+				<a className='mobile-hide' href='https://linkedin.com/in/yuchench' target='_blank'>
+					<span className='vertical-align'>
 						<Icon icon={linkedinIcon} />
 					</span>
 				</a>
-				<a href='https://twitter.com/meiehc' target='_blank'>
-					<span style={{ verticalAlign: 'middle' }}>
+				<a className='mobile-hide' href='https://twitter.com/meiehc' target='_blank'>
+					<span className='vertical-align'>
 						<Icon icon={twitterIcon} />
 					</span>
 				</a>
-				<a href='https://github.com/meieh' target='_blank'>
-					<span style={{ verticalAlign: 'middle' }}>
+				<a className='mobile-hide' href='https://github.com/meieh' target='_blank'>
+					<span className='vertical-align'>
 						<Icon icon={githubIcon} />
 					</span>
 				</a>
 			</Column>
-			<Column style={{ textAlign: 'right' }}>
+			<Column className='col' style={{ textAlign: 'right' }}>
 				<span>&copy; {new Date().getFullYear()} Mei</span>
 			</Column>
 		</Container>

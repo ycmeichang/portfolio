@@ -10,28 +10,23 @@ const Container = styled.div`
 	flex-wrap: wrap;
 `
 
-const Column = styled.div`
-	flex: 1;
-	padding: 2em;
-`
+const Column = styled.div`flex: 1;`
 
 export default (props) => (
 	<header>
 		<Container>
-			<Column>
-				<span>Mei 👩‍💻</span>
-			</Column>
-			<Column style={{ textAlign: 'right' }}>
-				<a href='mailto:meieh@pm.me'>
-					<span>
-						<Icon icon={mailIcon} />
-					</span>
+			<Column className='col'>
+				<a href='/'>
+					Mei <span>👩‍💻</span>
 				</a>
-				<a onClick={this.handleClick}>
-					<span style={{ marginLeft: '1em' }}>
-						{this.props.mode == 'light' && <Icon icon={moonIcon} />}
-						{this.props.mode == 'dark' && <Icon icon={sunIcon} />}
-					</span>
+			</Column>
+			<Column className='col' style={{ textAlign: 'right' }}>
+				<a href='mailto:meieh@pm.me'>
+					<Icon icon={mailIcon} />
+				</a>
+				<a onClick={props.handleClick} className='margin-left'>
+					{props.mode === 'light' && <Icon icon={moonIcon} />}
+					{props.mode === 'dark' && <Icon icon={sunIcon} />}
 				</a>
 			</Column>
 		</Container>
