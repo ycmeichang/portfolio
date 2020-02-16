@@ -5,5 +5,18 @@
  */
 
 module.exports = {
-	plugins: [ `gatsby-plugin-styled-components` ]
+	siteMetadata: {
+		title: 'Mei | Front-end Developer',
+		url: 'https://mei.surge.sh'
+	},
+	plugins: [
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				icon: `src/images/icon.png`
+			}
+		},
+		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-react-helmet`
+	]
 }
