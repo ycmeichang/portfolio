@@ -42,8 +42,7 @@ export default (props) => (
 				<Icon icon={mailIcon} />
 			</a>
 			<a onClick={props.handleClick}>
-				{props.mode === 'light' && <Icon icon={moonIcon} />}
-				{props.mode === 'dark' && <Icon icon={sunIcon} />}
+				<Icon icon={props.mode === 'light' ? moonIcon : sunIcon} />
 			</a>
 		</Column>
 	</Container>

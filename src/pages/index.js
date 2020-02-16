@@ -16,11 +16,7 @@ class Index extends React.Component {
 	}
 	handleClick = () => {
 		const mode = this.state.mode
-		if (mode === 'light') {
-			this.setState({ mode: 'dark' })
-		} else {
-			this.setState({ mode: 'light' })
-		}
+		this.setState({ mode: mode === 'light' ? 'dark' : 'light' })
 	}
 	render() {
 		return (
