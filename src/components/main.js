@@ -116,7 +116,7 @@ export default (props) => (
 			<Column>
 				<List>Responsive Web Design</List>
 				<List>Modern Technologies</List>
-				<List>and Qualities</List>
+				<List>SEO & SMO</List>
 			</Column>
 			<Column>
 				<Wrap>
